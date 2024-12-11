@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="767.236" height="581.335" viewBox="0 0 767.236 581.335">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e07494"/>
+      <stop offset="0.331" stop-color="#f2a09d"/>
+      <stop offset="0.678" stop-color="#c0a6d2"/>
+      <stop offset="1" stop-color="#64bdeb"/>
+    </linearGradient>
+  </defs>
+  <ellipse id="楕円形_142" data-name="楕円形 142" cx="200" cy="340" rx="200" ry="340" transform="translate(116.949 581.335) rotate(-107)" fill="url(#linear-gradient)"/>
+</svg>
