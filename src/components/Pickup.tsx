@@ -2,19 +2,17 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMediaQuery } from '@mui/material';
 import TitleIndex from './TitleIndex';
 
 const pickupData: PickupType[] = [
-    { title: "第140回明大祭テーマ", img: "/assets/images/(theme)/main_logo.png", href: "/theme" },
-    { title: "参加団体特集", img: "/assets/images/(feature)/feature.jpg", href: "/feature" },
-    { title: "校友インタビュー", img: "/assets/images/(interview)/koyuinterview04.jpg", href: "/interview" },
-    { title: "大型ビジョン広告", img: "/assets/images/(committee)/Ogatabijyonkoukokunituite00.jpg.png", href: "/vision" },
-    { title: "明大祭グッズ", img: "/assets/images/(goods)/keyholder.png", href: "/goods" },
-    { title: "他大学FSR", img: "/assets/images/(fsr)/FSR.jpg", href: "/fsr" },
-    { title: "明大祭×京王電鉄コラボ", img: "/assets/images/(committee)/keio_logo.png", href: "/keio" },
+    { title: "ラスト部門会議", img: "/assets/images/pickup/last.jpg", href: "/theme" },
+    { title: "新規合流", img: "/assets/images/pickup/start.jpg", href: "/feature" },
+    { title: "片付け日", img: "/assets/images/pickup/fes.jpg", href: "/interview" },
+    { title: "スシロー", img: "/assets/images/pickup/sushi.jpg", href: "/vision" },
+    { title: "バーベキュー", img: "/assets/images/pickup/bbq.jpg", href: "/vision" },
+    { title: "初部門ご飯", img: "/assets/images/pickup/niku.jpg", href: "/vision" },
 ]
 function shuffleArray(array: PickupType[]): PickupType[] {
     return array.sort(() => Math.random() - 0.5);
@@ -397,7 +395,7 @@ function PickupItemPC({ data, state, index, direction }: PickupItemProps) {
     }
 
     function imageCss(): string {
-        let css = "bg-background object-contain border-[6px] border-primary w-full h-full bg-white"
+        let css = "bg-background object-cover border-[6px] border-primary w-full h-full bg-white"
         if (isCenter()) {
             css += " rounded-[3vw]"
         } else {
@@ -445,7 +443,7 @@ function PickupItemPC({ data, state, index, direction }: PickupItemProps) {
     }
 
     return (
-        <Link href={data.href} className="flex flex-col items-center absolute">
+        <div className="flex flex-col items-center absolute">
             <div className="flex flex-col items-center">
                 <motion.div
                     variants={variants}
@@ -456,7 +454,7 @@ function PickupItemPC({ data, state, index, direction }: PickupItemProps) {
                 </motion.div>
                 <div className={textCss()}>{data.title}</div>
             </div>
-        </Link>
+        </div>
     )
 }
 
@@ -870,7 +868,7 @@ function PickupItemSP({ data, state, index, direction }: PickupItemProps) {
     }
 
     return (
-        <Link href={data.href} className="flex flex-col items-center absolute">
+        <div className="flex flex-col items-center absolute">
             <div className="flex flex-col items-center select-none">
                 <motion.div
                     variants={variants}
@@ -881,7 +879,7 @@ function PickupItemSP({ data, state, index, direction }: PickupItemProps) {
                 </motion.div>
                 <div className={textCss()}>{data.title}</div>
             </div>
-        </Link>
+        </div>
     )
 }
 

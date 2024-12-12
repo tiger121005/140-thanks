@@ -21,8 +21,8 @@ export default function Home() {
         <div className="w-screen flex flex-col items-center">
           <What />
           <Pickup />
-          <Announce />
           <News />
+          <Announce />
         </div>
       </div>
     </div>
@@ -56,9 +56,9 @@ function What() {
 
 function Announce() {
   return (
-    <div className="flex flex-col items-center mb-20">
-      <TitleIndex subTitle="140Web継続">For Senior </TitleIndex>
-      <div className="grid grid-cols-2 gap-16 mt-7 px-5">
+    <div className="flex flex-col items-center w-full">
+      <TitleIndex subTitle="タップしてみてね">Message </TitleIndex>
+      <div className="grid grid-cols-2 mt-7 w-full aspect-square max-w-[500px]">
         <AnnounceBox ImageNames="sho">しょうさん</AnnounceBox>
         <AnnounceBox ImageNames="yudai">ゆうだいさん</AnnounceBox>
         <AnnounceBox ImageNames="miyu">みゆうさん</AnnounceBox>
@@ -71,13 +71,13 @@ function Announce() {
 
 function AnnounceBox({ children, ImageNames }: { children: ReactNode, ImageNames: string }) {
   return (
-    <Link href={`/people/${ImageNames}`}>
+    <Link href={`/people/${ImageNames}`} className="hover:bg-gray-200 rounded-xl p-4">
       <Image
         src={`/assets/images/people/${ImageNames}.png`}
         alt=""
         width={500}
         height={500}
-        className="sm:size-36 lg:size-44 mx-auto rounded-full"
+        className="sm:size-36 lg:size-44 mx-auto max-w-[30vw] max-h-[30vw] rounded-full aspect-square object-cover"
       />
       <p className="text-center sm:text-base lg:text-xl break-keep">{children}</p>
     </Link>
@@ -86,7 +86,7 @@ function AnnounceBox({ children, ImageNames }: { children: ReactNode, ImageNames
 
 function News() {
   return (
-    <div className="lg:w-[750px] h-fit sm:w-[310px] flex flex-col items-center">
+    <div className="lg:w-[750px] h-fit sm:w-[310px] flex flex-col items-center mb-32">
       <TitleIndex subTitle="おしらせ">News</TitleIndex>
       <div className="w-full relative flex justify-center sm:top-3 lg:top-5">
         <div className="bg-transparent lg:rounded-[50px] sm:rounded-[20px] border-primary lg:border-[6px] sm:border-[3px] lg:w-[650px] lg:h-[200px] sm:w-[270px] sm:h-[140px] absolute lg:top-[-20px] lg:left-[30px] sm:top-[-8px] sm:left-[12px]" />
@@ -104,9 +104,7 @@ function News() {
           </div>
         </div>
       </div>
-      <div className="mt-[180px] lg:mt-[280px]">
-        <TransitionButton href="/news">詳しく見る</TransitionButton>
-      </div>
+      <div className="mt-[180px] lg:mt-[280px]" />
     </div>
   )
 }
