@@ -4,14 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { useMediaQuery } from "@mui/material";
 import { usePathname } from 'next/navigation'
 
 
 export default function Header() {
     const [isOpen, setOpen] = useState(false);
-    const isPC = useMediaQuery('(min-width: 900px)');
-
     const pathname = usePathname()
 
     // ページ移動を検知
