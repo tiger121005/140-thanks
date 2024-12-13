@@ -37,7 +37,7 @@ export default function HeroSection() {
 function DatePlace() {
     return (
         <div className="bg-white shadow-[2px_2px_#e07594] lg:shadow-[4px_4px_#e07594] px-6 py-2 rounded-full lg:rounded-3xl mt-10">
-            <Image src="/assets/images/svg/date-place.svg" alt="" width={1000} height={1000} className="object-contain w-[204px] lg:w-[400px]" />
+            <Image src="/assets/svg/from.svg" alt="" width={1000} height={1000} className="object-contain w-[174px] lg:w-[300px]" />
         </div>
     )
 }

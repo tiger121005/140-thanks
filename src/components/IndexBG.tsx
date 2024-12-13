@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useMediaQuery } from '@mui/material';
 
-const IndexBG = () => {
+const RotatingCircles = () => {
     const [pageHeight, setPageHeight] = useState(0);
     const isPC = useMediaQuery('(min-width: 1155px)');
 
@@ -22,7 +22,7 @@ const IndexBG = () => {
             let resizeHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             resizeHeight += 300;
             setPageHeight(resizeHeight);
-
+            
         };
         if (typeof window !== 'undefined') {
             window.addEventListener("resize", handleResize);
@@ -31,7 +31,7 @@ const IndexBG = () => {
             return () => window.removeEventListener("resize", handleResize);
         }
     }, [isPC]);
-
+    
     return (
         <div className="absolute w-screen overflow-hidden -z-40" style={{ height: `${pageHeight}px` }} >
             <div className='animate-moveUp h-[8800px]'>
@@ -49,7 +49,7 @@ const IndexBG = () => {
                 <div className='w-[3vw] h-[3vw] top-[600px] left-[10vw] rounded-full border-2 border-secondary absolute' />
 
 
-
+                
                 <div className='w-[6vw] h-[6vw] top-[800px] right-[2vw] rounded-full bg-secondary absolute' />
                 <div className='w-[3vw] h-[3vw] top-[800px] right-[10vw] rounded-full border-2 border-secondary absolute' />
 
@@ -85,7 +85,7 @@ const IndexBG = () => {
 
                 <div className='w-[5vw] h-[5vw] top-[3000px] left-[2vw] rounded-full bg-primary absolute' />
                 <div className='w-[3vw] h-[3vw] top-[3000px] left-[10vw] rounded-full border-2 border-secondary absolute' />
-
+                
                 <div className='w-[6vw] h-[6vw] top-[3200px] right-[2vw] rounded-full bg-secondary absolute' />
                 <div className='w-[3vw] h-[3vw] top-[3200px] right-[10vw] rounded-full border-2 border-secondary absolute' />
 
@@ -169,7 +169,7 @@ const IndexBG = () => {
 
                 <div className='w-[5vw] h-[5vw] top-[8600px] left-[2vw] rounded-full bg-primary absolute' />
                 <div className='w-[3vw] h-[3vw] top-[8600px] left-[10vw] rounded-full border-2 border-secondary absolute' />
-
+               
             </div>
 
             <div className='animate-moveUp h-[8800px] overflow-hidden'>
@@ -309,9 +309,9 @@ const IndexBG = () => {
                 <div className='w-[3vw] h-[3vw] top-[8600px] left-[10vw] rounded-full border-2 border-secondary absolute' />
 
             </div>
-
+            
         </div>
     );
 };
 
-export default IndexBG;
+export default RotatingCircles;

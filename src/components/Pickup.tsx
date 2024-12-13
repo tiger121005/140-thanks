@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMediaQuery } from '@mui/material';
-import TitleIndex from './TitleIndex';
+import TitleIndex from './title/TitleIndex';
 
 const pickupData: PickupType[] = [
     { title: "ラスト部門会議", img: "/assets/images/pickup/last.jpg", href: "/theme" },
@@ -820,7 +820,7 @@ function PickupItemSP({ data, state, index, direction }: PickupItemProps) {
     }
 
     function imageCss(): string {
-        let css = "bg-background object-contain border-[6px] border-primary w-full h-full bg-white"
+        let css = "bg-background object-cover border-[6px] border-primary w-full h-full bg-white"
         if (isCenter()) {
             css += " rounded-[3vw]"
         } else {

@@ -1,8 +1,7 @@
 import IndexBG from "@/components/IndexBG";
 import Loading from "@/components/Loading";
 import HeroSection from "@/components/HeroSection";
-import TransitionButton from "@/components/TransitionButton";
-import TitleIndex from "@/components/TitleIndex";
+import TitleIndex from "@/components/title/TitleIndex";
 import Pickup from "@/components/Pickup";
 import { ReactNode } from "react";
 import Image from "next/image";
@@ -19,7 +18,6 @@ export default function Home() {
           <HeroSection />
         </div>
         <div className="w-screen flex flex-col items-center">
-          <What />
           <Pickup />
           <News />
           <Announce />
@@ -27,31 +25,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
-
-function What() {
-  return (
-    <div className="mb-32">
-      <div className="flex justify-center items-start">
-        <Image src="/assets/images/svg/logo.svg" alt="" width={250} height={250} className="object-contain lg:max-w-60 sm:max-w-52" />
-        <div className="flex flex-col items-end">
-          <div className="text-primary font-bold lg:text-5xl sm:text-3xl">What&apos;s 明大祭?</div>
-          <div className="text-accent text-xl font-semibold mb-3">明大祭とは・委員長挨拶</div>
-          <div className="w-full h-2"></div>
-          <TransitionButton href="/about">詳しく見る</TransitionButton>
-        </div>
-      </div>
-      <div className="w-full flex justify-center">
-        <Image src="/assets/images/svg/theme.svg" alt="" width={1000} height={1000} className="object-scale-down sm:max-w-60 lg:max-w-72 -mt-4 ml-20 -rotate-3" />
-        <div className="-ml-28 lg:mt-1 sm:w-[137px] sm:h-[52px] lg:w-[200px] lg:h-[90px]">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 137.247 51.723">
-            <line id="線_50" data-name="線 50" y1="21.258" x2="111.82" transform="translate(0.585 22.223)" fill="none" stroke="#64bdeb" strokeLinecap="round" strokeWidth="1" />
-            <line id="線_51" data-name="線 51" y1="50.377" x2="98.716" transform="translate(37.858 0.673)" fill="none" stroke="#64bdeb" strokeLinecap="round" strokeWidth="1" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  )
 }
 
 function Announce() {

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.72 14.47">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e07594;
+        font-family: SawarabiMincho-Medium, 'Sawarabi Mincho';
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      .cls-2 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-3 {
+        letter-spacing: .1em;
+      }
+
+      .cls-4 {
+        letter-spacing: .09em;
+      }
+    </style>
+  </defs>
+  <g id="_白抜き" data-name="白抜き">
+    <text class="cls-1" transform="translate(0 10.63)"><tspan x="0" y="0">from </tspan><tspan class="cls-2" x="30.89" y="0">W</tspan><tspan class="cls-4" x="43.31" y="0">e</tspan><tspan class="cls-3" x="50.85" y="0">b</tspan><tspan x="59.12" y="0">部門 新規</tspan></text>
+  </g>
+</svg>

@@ -19,23 +19,20 @@ export default function Header() {
     return (
         <div className="relative">
             <div className='bg-primary w-full h-[50px] fixed' />
-            
+
             <Link href='/' className="pl-[15px] py-[6px] fixed z-40">
                 <Image src='/assets/svg/logo-white.svg' alt='logo' width={40} height={40} className="absolute" />
                 <AnimatePresence>
                     <motion.div
-                        animate={ isOpen ? "open" : "closed" }
+                        animate={isOpen ? "open" : "closed"}
                         variants={{
                             open: { opacity: 1, transition: { delay: 0.2 } },
-                            closed: { opacity: 0}
+                            closed: { opacity: 0 }
                         }}>
                         <Image src="/assets/svg/logo.svg" alt='logo' width={40} height={40} className="relative drop-shadow-[1px_1px_#FFFFFF]" />
-                        </motion.div>
+                    </motion.div>
                 </AnimatePresence>
-                
             </Link>
-            
-            
         </div>
     );
 }
